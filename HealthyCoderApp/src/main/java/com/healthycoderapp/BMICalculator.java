@@ -4,9 +4,12 @@ import java.util.Comparator;
 import java.util.List;
 
 public class BMICalculator {
-	
-	private static final double BMI_THRESHOLD = 25.0;
 
+	private static final double BMI_THRESHOLD = 25.0;  // BMI 基準値
+
+	/*
+	 * ダイエット推奨判定
+	 */
 	public static boolean isDietRecommended(double weight, double height) {
 		if (height == 0.0) throw new ArithmeticException();
 		double bmi = weight / (height * height);
